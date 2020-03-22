@@ -1,7 +1,7 @@
 pipeline {
 
   agent {
-  default {
+  kubernetes {
   }
  }
   environment {
