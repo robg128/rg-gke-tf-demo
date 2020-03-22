@@ -1,10 +1,6 @@
 pipeline {
 
-agent {
-        node {
-            label 'master'
-        }
-    }
+agent any
   environment {
     SVC_ACCOUNT_KEY = credentials('terraform-auth')
   }
