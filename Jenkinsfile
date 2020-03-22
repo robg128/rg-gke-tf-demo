@@ -1,6 +1,11 @@
 pipeline {
 
-agent any
+  agent {
+  kubernetes {
+   label 'default'
+  }
+ }
+
   environment {
     SVC_ACCOUNT_KEY = credentials('terraform-auth')
   }
