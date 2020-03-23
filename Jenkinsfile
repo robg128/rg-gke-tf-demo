@@ -1,6 +1,6 @@
 pipeline {
 
-  agent any {
+  agent kubernetes {
    label 'terraform'
 }
   environment {
