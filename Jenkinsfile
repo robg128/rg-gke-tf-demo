@@ -2,12 +2,14 @@ podTemplate(containers: [
     containerTemplate(name: 'terraform', image: 'hashicorp/terraform', ttyEnabled: true, command: 'cat')
   ]) {
 
-    environment {
-    SVC_ACCOUNT_KEY = credentials('terraform-auth')
-  }
+    
 
 
     node(POD_LABEL) {  
+
+      environment {
+    SVC_ACCOUNT_KEY = credentials('terraform-auth')
+  }
 
   
     stage('Checkout') {
