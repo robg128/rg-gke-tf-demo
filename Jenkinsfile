@@ -40,7 +40,6 @@ spec:
         container('terraform') {
           sh 'terraform init'
           sh 'TF_LOG=INFO TF_LOG_PATH=tf-plan-output.txt terraform plan -out myplan'
-          def tf-plan-output.txt = containerLog(name: 'tf-plan-output.txt', returnLog: true, tailingLines: 5, sinceSeconds: 20, limitBytes: 50000)
         }
       }      
     }
