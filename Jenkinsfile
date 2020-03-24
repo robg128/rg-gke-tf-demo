@@ -39,7 +39,7 @@ spec:
       steps {
         container('terraform') {
           sh 'terraform init'
-          sh 'TF_LOG=INFO TF_LOG_PATH=tf-plan-output.txt terraform plan -out myplan'
+          sh 'terraform plan -out myplan'
         }
       }      
     }
