@@ -6,7 +6,6 @@ provider "google" {
 }
 
 
-
 resource "google_storage_bucket" "generic-bucket" {
   project =  "smiling-office-273317"
   name          = "rob-test-bucket"
