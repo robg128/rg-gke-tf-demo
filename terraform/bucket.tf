@@ -6,8 +6,15 @@
   }
 
   # Create a GCS Bucket
-  resource "google_storage_bucket" "my_bucket" {
-    name     = var.bucket_name
+  resource "google_storage_bucket" "generic-bucket" {
+    name     = "rob-test-123"
     location = var.region
   }
+
+output "bucket" {
+  value = ["${google_storage_bucket.generic-bucket}"]
+
+}
+
+
 
