@@ -11,10 +11,6 @@
     location = var.region
   }
 
-output "bucket" {
-  value = ["${google_storage_bucket.generic-bucket}"]
-
-}
 
 
 
